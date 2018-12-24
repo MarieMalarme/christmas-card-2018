@@ -12,11 +12,17 @@ body {
   font-size: 3rem;
   cursor: url(src/cursor.png), pointer;
   background-color: #9BFFDA;
+  overflow-y: hidden;
 }
 
 @font-face {
   font-family: "Space Grotesk";
   src: url("./src/SpaceGrotesk-Bold.woff") format("woff"),
+}
+
+iframe {
+  /*visibility: hidden;*/
+  margin-top: 300vh;
 }
 
 .dots {
