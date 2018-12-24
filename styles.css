@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  transition: all ease-in-out 0.2s;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Space Grotesk";
+  color: white;
+  font-size: 3rem;
+  cursor: url(src/cursor.png), pointer;
+  background-color: #9BFFDA;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./src/SpaceGrotesk-Bold.woff") format("woff"),
+}
+
+.dots {
+  position: absolute;
+  animation: dots 1.5s alternate-reverse infinite;
+  width: 100vw;
+  height: 100vh;
+}
+
+.dot {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@keyframes dots {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.emoji {
+  font-size: 6rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.square {
+  width: 15vw;
+  height: 15vw;
+  padding: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+
+#square0 {
+  font-size: 10rem;
+  color: #212121;
+}
+
+.mobile {
+  display: none;
+  position: fixed;
+  width: calc(100vw - 10rem);
+  height: calc(100vh - 10rem);
+  padding: 5rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: #212121;
+}
+
+@media (max-width: 900px) {
+  .mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9BFFDA;
+    z-index: 1;
+  }
+
+  body {
+    cursor: pointer;
+  }
+}
